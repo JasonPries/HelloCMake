@@ -19,3 +19,6 @@ script:
   - cmake ..
   - make
   - ./HelloCMake
+
+after_success:
+  - lcov --capture --directory . --output-file coverage/coverage.info --no-external
