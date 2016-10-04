@@ -1,4 +1,5 @@
 language: cpp
+dist: trusty
 
 addons:
   apt:
@@ -7,7 +8,7 @@ addons:
       - kalakris-cmake
     packages:
       - cmake
-      - lcov-1.12
+      - lcov
 
 compiler:
   - gcc
