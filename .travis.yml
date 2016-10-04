@@ -3,8 +3,8 @@ language: cpp
 addons:
   apt:
     sources:
-      - kalakris-cmake
       - ubuntu-toolchain-r-test
+      - kalakris-cmake
     packages:
       - cmake
       - lcov
@@ -14,6 +14,7 @@ compiler:
 
 before_install:
   - pip install --user cpp-coveralls
+  - apt search lcov
 
 script:
   - mkdir build
