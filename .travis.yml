@@ -1,3 +1,4 @@
+dist: trusty
 language: cpp
 
 addons:
@@ -26,6 +27,6 @@ after_success:
   - mkdir coverage
   - lcov --help
   - lcov --version
-  - lcov --capture --kernel-directory . --output-file ./coverage/coverage.info
+  - lcov --capture --directory . --output-file ./coverage/coverage.info
   - gem install coveralls-lcov
   - coveralls-lcov ./coverage/coverage.info
