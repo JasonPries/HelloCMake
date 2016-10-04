@@ -2,12 +2,12 @@ language: cpp
 
 addons:
   apt:
-    packages:
-      - cmake
-      - lcov
     sources:
       - kalakris-cmake
       - ubuntu-toolchain-r-test
+    packages:
+      - cmake
+      - lcov
 
 compiler:
   - gcc
