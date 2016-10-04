@@ -24,6 +24,7 @@ script:
 after_success:
   - mkdir coverage
   - lcov --help
+  - lcov --version
   - lcov --capture --directory . --output-file ./coverage/coverage.info
   - gem install coveralls-lcov
   - coveralls-lcov ./coverage/coverage.info
