@@ -28,6 +28,6 @@ after_success:
   - lcov --help
   - lcov --version
   - lcov --capture --directory . --output-file ./coverage/coverage.info
-  - lcov --remove ./coverage/coverage.info /usr/include/c++/4.6/bits/* --output-file ./coverage/coverage.info
+  - lcov --remove ./coverage/coverage.info '/usr/include/c++/*' --output-file ./coverage/coverage.info
   - gem install coveralls-lcov
   - coveralls-lcov ./coverage/coverage.info
