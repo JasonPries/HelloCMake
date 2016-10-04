@@ -7,14 +7,13 @@ addons:
       - kalakris-cmake
     packages:
       - cmake
-      - lcov
+      - lcov-1.12
 
 compiler:
   - gcc
 
 before_install:
   - pip install --user cpp-coveralls
-  - apt search lcov
 
 script:
   - mkdir build
