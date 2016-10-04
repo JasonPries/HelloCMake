@@ -9,20 +9,13 @@ addons:
 compiler:
   - gcc
 
-#before_install:
-#  - pip install --user cpp-coveralls
-
 script:
-  - mkdir build
-  - cd build
-  - cmake ..
-  - make
+  - mkdir build && cd build
+  - cmake .. && make
   - ./HelloCMake
 
 after_success:
   - mkdir coverage
-  - lcov --help
-  - lcov --version
   - lcov --capture --directory . --output-file ./coverage/coverage.info
   - lcov --remove ./coverage/coverage.info '/usr/include/c++/*' --output-file ./coverage/coverage.info
   - gem install coveralls-lcov
