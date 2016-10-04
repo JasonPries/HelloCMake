@@ -5,7 +5,7 @@ addons:
     packages:
       - cmake
       - lcov
-   sources:
+    sources:
       - kalakris-cmake
 
 compiler:
