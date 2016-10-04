@@ -22,6 +22,6 @@ script:
   - ./HelloCMake
 
 after_success:
-  - lcov --capture --directory . --output-file coverage/coverage.info
+  - lcov --capture --directory . --output-file ./coverage/coverage.info
   - gem install coveralls-lcov
-  - coveralls-lcov coverage/coverage.info
+  - coveralls-lcov ./coverage/coverage.info
