@@ -7,6 +7,7 @@ addons:
       - lcov
     sources:
       - kalakris-cmake
+      - ubuntu-toolchain-r-test
 
 compiler:
   - gcc
