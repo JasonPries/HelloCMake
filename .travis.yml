@@ -27,6 +27,6 @@ after_success:
   - mkdir coverage
   - lcov --help
   - lcov --version
-  - lcov --capture --directory . --output-file ./coverage/coverage.info
+  - lcov --capture --directory . --output-file ./coverage/coverage.info --remove /usr/include/*
   - gem install coveralls-lcov
   - coveralls-lcov ./coverage/coverage.info
