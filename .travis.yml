@@ -1,13 +1,13 @@
 language: cpp
 
 addons:
-  apt: 
-   sources: 
-      - ubuntu-toolchain-r-test
-      - kalakris-cmake
+  apt:
     packages:
       - cmake
       - lcov
+   sources:
+      - ubuntu-toolchain-r-test
+      - kalakris-cmake
 
 compiler:
   - gcc
