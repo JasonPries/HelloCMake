@@ -1,10 +1,6 @@
-dist: trusty
-language: cpp
-
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
       - kalakris-cmake
     packages:
       - cmake
@@ -13,8 +9,8 @@ addons:
 compiler:
   - gcc
 
-before_install:
-  - pip install --user cpp-coveralls
+#before_install:
+#  - pip install --user cpp-coveralls
 
 script:
   - mkdir build
