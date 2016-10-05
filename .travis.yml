@@ -13,10 +13,11 @@ script:
   - mkdir build && cd build
   - cmake .. && make
   - ./HelloCMake
+  - ./test/run_tests
 
 after_success:
   - mkdir coverage
-  - lcov --capture --directory . --output-file ./coverage/coverage.info
-  - lcov --remove ./coverage/coverage.info '/usr/include/c++/*' --output-file ./coverage/coverage.info
+  - lcov -c -d . -o ./coverage/coverage.info
+  - lcov -r ./coverage/coverage.info "/usr/include/c++/*" "*/gtest/*" -o ./coverage/coverage.info
   - gem install coveralls-lcov
   - coveralls-lcov ./coverage/coverage.info
