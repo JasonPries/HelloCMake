@@ -1,0 +1,22 @@
+addons:
+  apt:
+    sources:
+      - kalakris-cmake
+    packages:
+      - cmake
+      - lcov
+
+compiler:
+  - gcc
+
+script:
+  - mkdir build && cd build
+  - cmake .. && make
+  - ./HelloCMake
+
+after_success:
+  - mkdir coverage
+  - lcov --capture --directory . --output-file ./coverage/coverage.info
+  - lcov --remove ./coverage/coverage.info '/usr/include/c++/*' --output-file ./coverage/coverage.info
+  - gem install coveralls-lcov
+  - coveralls-lcov ./coverage/coverage.info
