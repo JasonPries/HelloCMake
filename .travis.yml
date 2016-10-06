@@ -12,10 +12,10 @@ compiler:
 script:
   - mkdir build && cd build
   - cmake .. && make
-  - ./HelloCMake
-  - ./test/run_tests
 
 after_success:
+  - ./HelloCMake
+  - ./test/run_tests
   - mkdir coverage
   - lcov -c -d . -o ./coverage/coverage.info
   - lcov -r ./coverage/coverage.info "/usr/include/c++/*" "*/gtest/*" -o ./coverage/coverage.info
