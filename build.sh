@@ -8,8 +8,8 @@ cmake .. && make
 
 mkdir -p coverage
 
-COV_FILE="./coverage/coverage.info"
-COV_DIR="./coverage"
+COV_FILE="coverage/coverage.info"
+COV_DIR=".coverage"
 COV_SITE=$COV_DIR/"index.html"
 
 lcov -c -d .. -o $COV_FILE

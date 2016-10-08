@@ -1,7 +1,3 @@
-//
-// Created by jpries on 10/5/16.
-//
-
 #ifndef HELLOCMAKE_LINE_H
 #define HELLOCMAKE_LINE_H
 
